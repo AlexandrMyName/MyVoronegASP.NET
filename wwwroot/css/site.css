@@ -1,0 +1,312 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+    
+}
+
+/* ссылки */
+a {
+  color: #ffd800;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+    border-top: 1px solid #e5e5e5;
+    background-color: #252525;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+
+}
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+    
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+   /* background-color: #e5e5e5;*/
+    background-image: url("../img/Voroneg/1.jpg");
+    background-size: cover;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px; /* Vertically center the text there */
+ 
+}
+
+
+.glow-on-hover { /* КНОПКА С АНИМАЦИЕЙ (ЧЕРНАЯ) */
+    width: 320px;
+    height: 70px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    
+     
+    border-radius: 10px;
+}
+
+    .glow-on-hover:before {
+        content: '';
+        background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        background-size: 400%;
+        z-index: -1;
+        filter: blur(5px);
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        animation: glowing 20s linear infinite;
+        opacity: 0;
+        transition: opacity .3s ease-in-out;
+        border-radius: 10px;
+    }
+
+    .glow-on-hover:active {
+        color: #000
+    }
+
+        .glow-on-hover:active:after {
+            background: transparent;
+        }
+
+    .glow-on-hover:hover:before {
+        opacity: 1;
+    }
+
+    .glow-on-hover:after {
+        z-index: -1;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #111;
+        left: 0;
+        top: 0;
+        border-radius: 10px;
+    }
+
+ 
+/* Красивый текст с анимацией */
+.animationText_01 {
+    margin: auto;
+    font-size: 3.5rem;
+    font-weight: 300;
+    animation: lights 5s 750ms linear infinite;
+}
+
+.slideshow {
+    width: 100%;
+    height: 420px;
+    position: relative;
+    overflow: hidden;
+    background: #000;
+    margin: 20px 0;
+   
+}
+
+.slideshow-item {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    animation: slideanim 40s infinite;
+    pointer-events: none;
+   
+}
+
+    .slideshow-item:nth-child(1),
+    .slideshow-item:nth-child(1) img {
+        animation-delay: 0;
+    }
+
+    .slideshow-item:nth-child(2),
+    .slideshow-item:nth-child(2) img {
+        animation-delay: 10s;
+    }
+
+    .slideshow-item:nth-child(3),
+    .slideshow-item:nth-child(3) img {
+        animation-delay: 20s;
+    }
+
+    .slideshow-item:nth-child(4),
+    .slideshow-item:nth-child(4) img {
+        animation-delay: 30s;
+    }
+
+    .slideshow-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        animation: zoom 40s infinite;
+
+    }
+
+.slideshow-item-text {
+    max-width: 50%;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgba(0,0,0,0.7);
+    color: #fff;
+    padding: 20px 30px;
+    font-family: Verdana, sans-serif;
+}
+
+    .slideshow-item-text h5 {
+        font-size: 22px;
+        margin: 0 0 10px 0;
+        color: #BFE2FF;
+    }
+
+    .slideshow-item-text p {
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+
+@keyframes slideanim {
+    12.5% {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    25% {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    37.5% {
+        opacity: 0;
+    }
+}
+
+@keyframes zoom {
+    50% {
+        transform: scale(1.3);
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .slideshow-item-text {
+        max-width: 75%;
+    }
+}
+
+@media screen and (max-width: 456px) {
+    .slideshow-item-text {
+        bottom: 0;
+        left: 0;
+        max-width: 100%;
+    }
+
+        .slideshow-item-text h5 {
+            font-size: 18px;
+        }
+
+        .slideshow-item-text p {
+            font-size: 13px;
+        }
+}
+
+    @keyframes lights {
+        0% {
+            color: hsl(230, 40%, 80%);
+            text-shadow: 0 0 1em hsla(320, 100%, 50%, 0.2), 0 0 0.125em hsla(320, 100%, 60%, 0.3), -1em -0.125em 0.5em hsla(40, 100%, 60%, 0), 1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+        }
+
+        30% {
+            color: hsl(230, 80%, 90%);
+            text-shadow: 0 0 1em hsla(320, 100%, 50%, 0.5), 0 0 0.125em hsla(320, 100%, 60%, 0.5), -0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2), 0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+        }
+
+        40% {
+            color: hsl(230, 100%, 95%);
+            text-shadow: 0 0 1em hsla(320, 100%, 50%, 0.5), 0 0 0.125em hsla(320, 100%, 90%, 0.5), -0.25em -0.125em 0.125em hsla(40, 100%, 60%, 0.2), 0.25em 0.125em 0.125em hsla(200, 100%, 60%, 0.4);
+        }
+
+        70% {
+            color: hsl(230, 80%, 90%);
+            text-shadow: 0 0 1em hsla(320, 100%, 50%, 0.5), 0 0 0.125em hsla(320, 100%, 60%, 0.5), 0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2), -0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+        }
+
+        100% {
+            color: hsl(230, 40%, 80%);
+            text-shadow: 0 0 1em hsla(320, 100%, 50%, 0.2), 0 0 0.125em hsla(320, 100%, 60%, 0.3), 1em -0.125em 0.5em hsla(40, 100%, 60%, 0), -1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+        }
+    }
+
+
+    @keyframes glowing {
+        0% {
+            background-position: 0 0;
+        }
+
+        50% {
+            background-position: 400% 0;
+        }
+
+        100% {
+            background-position: 0 0;
+        }
+    }
+
+ 
+ 
+
+
+
+
+
+
+
+
