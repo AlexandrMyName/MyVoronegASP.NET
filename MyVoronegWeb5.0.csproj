@@ -3,6 +3,7 @@
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
     <RootNamespace>MyVoronegWeb5._0</RootNamespace>
+    <StartupObject>MyVoronegWeb5._0.Program</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
